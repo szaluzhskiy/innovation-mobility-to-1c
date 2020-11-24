@@ -1,0 +1,10 @@
+server.port: 8088
+
+app:
+    innov:
+      ftp:
+        user: bob
+        password: 123
+        remoteHost: 109.10.10.4
+        remotePort: 23
+        targetFolder: /var/logs/foo

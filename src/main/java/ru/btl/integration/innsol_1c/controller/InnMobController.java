@@ -1,5 +1,6 @@
 package ru.btl.integration.innsol_1c.controller;
 
+import java.io.IOException;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -17,14 +18,11 @@ import ru.btl.integration.innsol_1c.service.InnMobService;
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class InnMobController implements InnMobResource {
 
-  @Value("app.innvov.sftp.path")
-  String sftpPath;
-
   InnMobService innMobService;
 
   @Override
-  public ResponseEntity<String> uploadEvent(String event) {
-    innMobService.uploadEventToSFTP(event, sftpPath);
+  public ResponseEntity<String> uploadEvent(String event) throws IOException {
+    innMobService.uploadEventToSFTP(event);
     return new ResponseEntity<String>(HttpStatus.OK);
   }
 }
