@@ -29,8 +29,8 @@ public class FtpClientService {
     ftp = new FTPClient();
 
     ftp.addProtocolCommandListener(new PrintCommandListener(new PrintWriter(System.out)));
-
     ftp.connect(ftpClientProperties.getRemoteHost(), ftpClientProperties.getRemotePort());
+    ftp.enterLocalPassiveMode();
     int reply = ftp.getReplyCode();
     log.debug("FTP server response code {}", reply);
     if (!FTPReply.isPositiveCompletion(reply)) {

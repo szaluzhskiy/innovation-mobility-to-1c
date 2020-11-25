@@ -10,9 +10,9 @@
     </parent>
     <groupId>ru.btl</groupId>
     <artifactId>innovative-solutions-to-1c</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>innovative-solutions-to-1c</name>
-    <description>Integration of rzd to 1C</description>
+    <version>0.0.1</version>
+    <name>btl-mobility</name>
+    <description>Integration of rzd Innovative Mobility to 1C</description>
 
     <properties>
         <java.version>1.8</java.version>
