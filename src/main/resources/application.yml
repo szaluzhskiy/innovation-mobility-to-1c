@@ -4,7 +4,6 @@ app:
     innov:
       ftp:
         user: sc0904102
-        password: o1joP6KPbF
         remoteHost: terminal.scloud.ru
         remotePort: 2121
         targetFolder: /INPUT/IM
