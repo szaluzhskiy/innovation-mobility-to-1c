@@ -1,4 +1,4 @@
-server.port: 8088
+server.port: 80
 
 app:
     innov:
@@ -21,4 +21,8 @@ quickstart:
 server:
   servlet:
     context-path: /btl
+  port: 443
+  ssl:
+    key-store: keystore.p12
+    keyStoreType: PKCS12
 
